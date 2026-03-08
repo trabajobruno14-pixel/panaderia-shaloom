@@ -732,7 +732,7 @@ margin-top: 48px;
     display: none; 
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(245,240,232,0.98);
+   background: rgba(61,43,31,0.97);
     backdrop-filter: blur(20px);
     flex-direction: column;
     align-items: center;
@@ -740,8 +740,10 @@ margin-top: 48px;
     gap: 32px;
     z-index: 99;
   }
-  .nav-links.open { display: flex; }
-  .nav-links a { font-size: 1.2rem; }
+  .nav-links.open { display: flex; background: rgba(61,43,31,0.97); }
+.nav-links.open a { color: #FEFCF8; font-size: 1.3rem; }
+.nav-links.open a:hover { color: #C8A96E; }
+  .nav-links a { font-size: 1.3rem; color: #FEFCF8; }
   .menu-toggle { display: flex; z-index: 100; }
 
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
