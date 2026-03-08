@@ -337,7 +337,57 @@ margin-top: 48px;
   font-style: italic;
   margin-top: 12px;
 }
-
+/* ═══════════════ HORARIOS ═══════════════ */
+.horarios-section {
+  padding: 60px 24px;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+.horarios-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 700;
+  color: var(--brown);
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.horarios-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.horario-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 28px 24px;
+  border: 1px solid rgba(200,169,110,0.1);
+  transition: transform 0.3s;
+}
+.horario-card:hover {
+  transform: translateY(-3px);
+}
+.horario-card h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--brown);
+  margin-bottom: 6px;
+}
+.horario-card p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  color: var(--text-light);
+}
+.horario-card .cerrado {
+  color: #B83230;
+  font-weight: 600;
+}
 /* ═══════════════ CATALOG ═══════════════ */
 .catalog-section {
   background: var(--white);
@@ -755,7 +805,22 @@ margin-top: 48px;
     <div class="line"></div>
   </div>
 </section>
-
+<!-- ═══════ HORARIOS ═══════ -->
+<section class="horarios-section">
+  <div class="reveal">
+    <h3 class="horarios-title">🕐 Horarios de Atención</h3>
+    <div class="horarios-grid">
+      <div class="horario-card">
+        <h4>Lunes a Sábado</h4>
+        <p>7:00 - 16:00</p>
+      </div>
+      <div class="horario-card">
+        <h4>Domingo</h4>
+        <p class="cerrado">Cerrado</p>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- ═══════ CATÁLOGO ═══════ -->
 <section class="catalog-section" id="catalogo">
   <div class="section" style="padding-top:80px;padding-bottom:80px;">
