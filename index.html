@@ -1253,7 +1253,9 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
+window.addEventListener('load', function() {
+  window.scrollTo(0, 0);
+});
 document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
   observer.observe(el);
 });
