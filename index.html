@@ -131,6 +131,15 @@ body::after {
   color: var(--brown);
   letter-spacing: 0.5px;
 }
+.nav-logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  vertical-align: middle;
+  border: 2px solid var(--gold);
+}
 .nav-brand span { color: var(--gold-dark); }
 .nav-links { display: flex; gap: 28px; list-style: none; }
 .nav-links a {
@@ -790,7 +799,7 @@ background: #FEFCF8;
 
 <!-- ═══════ NAVBAR ═══════ -->
 <nav class="navbar" id="navbar">
-  <div class="nav-brand">Panadería <span>Shaloom</span></div>
+  <div class="nav-brand"><img src="logo.png" alt="Logo" class="nav-logo">Panadería <span>Shaloom</span></div>
   <ul class="nav-links" id="navLinks">
     <li><a href="#inicio" onclick="closeMenu()">Inicio</a></li>
     <li><a href="#catalogo" onclick="closeMenu()">Catálogo</a></li>
