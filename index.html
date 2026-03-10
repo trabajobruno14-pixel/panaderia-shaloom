@@ -1366,11 +1366,16 @@ function closeMenu() {
 
 // PANEL SWITCHING
 function showPanel(panel) {
-  document.querySelectorAll('.catalog-panel').forEach(p => p.classList.remove('active'));
-  if (panel === 'selector') document.getElementById('catalogSelector').classList.add('active');
-  else if (panel === 'bolsas') document.getElementById('panelBolsas').classList.add('active');
-  else if (panel === 'empaquetados') document.getElementById('panelEmpaquetados').classList.add('active');
-  document.getElementById('catalogo').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  document.querySelectorAll('.catalog-panel').forEach(p => {
+    p.classList.remove('active');
+    p.style.display = 'none';
+  });
+  var el;
+  if (panel === 'selector') el = document.getElementById('catalogSelector');
+  else if (panel === 'bolsas') el = document.getElementById('panelBolsas');
+  else if (panel === 'empaquetados') el = document.getElementById('panelEmpaquetados');
+  el.style.display = 'block';
+  el.classList.add('active');
 }
 
 // CATEGORY FILTER
